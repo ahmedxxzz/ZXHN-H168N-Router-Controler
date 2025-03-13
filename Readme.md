@@ -21,3 +21,53 @@ A Python-based command-line tool to manage router settings including MAC filteri
 ### Basic Syntax
 ```bash
 python router_tool.py [global_options] <command> [command_options]
+```
+
+## Available Commands
+
+1.  **Restart Router**
+
+    **bash**
+
+    ```bash
+    python router_tool.py -router -ip 192.168.1.1 --username admin -password admin restart
+    ```
+
+2.  **List MAC Addresses**
+
+    **bash**
+
+    ```bash
+    python router_tool.py -router -ip 192.168.1.1 username admin -password admin list -macs
+    ```
+
+3.  **Add MAC Address**
+
+    **bash**
+
+    ```bash
+    python router_tool.py -router -ip 192.168.1.1 --username admin -password admin \
+    add-mac -name " Device Name " mac " 00 : 11 : 22 : 33 : 44 : 55 " -ssid 1
+    ```
+
+4.  **Delete MAC Address**
+
+    **bash**
+
+    ```bash
+    # Delete by MAC address
+    python router_tool.py --router-ip 192.168.1.1 --username admin --password admin \
+      delete-mac --mac "00:11:22:33:44:55" --ssid 1
+
+    # Delete by name
+    python router_tool.py --router-ip 192.168.1.1 --username admin --password admin \
+      delete-mac --name "Device Name" --ssid 1
+    ```
+
+5.  **Logout Session**
+
+    **bash**
+
+    ```bash
+    python router_tool.py --router-ip 192.168.1.1 --username admin --password admin logout
+    ```
