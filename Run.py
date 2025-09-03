@@ -44,9 +44,9 @@ headers_1 = {
     "Accept-Encoding": "gzip, deflate, br",
     "Priority": "u=0, i",}
 
-Router_Ip = '192.168.1.1'
+Router_Ip = '192.168.1.12'
 USERNAME = 'admin'
-PASSWORD = 'admin'
+PASSWORD = 'Bodyryad20@'
 ############ Helping Methods #############
 
 def create_session() -> requests.Session:
@@ -339,3 +339,9 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+'''
+To Run Write :
+
+py .\Run.py restart
+'''
